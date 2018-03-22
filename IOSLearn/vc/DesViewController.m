@@ -8,7 +8,7 @@
 
 #import "DesViewController.h"
 
-@interface DesViewController ()
+@interface DesViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,6 +19,8 @@
     self.view.backgroundColor = [UIColor redColor];
     UIBarButtonItem * backBtn = [[UIBarButtonItem alloc] initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(backClick)];
     self.navigationItem.leftBarButtonItem = backBtn;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -34,7 +36,16 @@
     [self.navigationController popViewControllerAnimated:YES];
     
 }
-
+// 此方法应该代理定义在界面基类中
+-(BOOL) gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    if([self.navigationController.viewControllers count] == 1){
+        return NO;
+        
+    }else {
+        return YES;
+    }
+    
+}
 /*
 #pragma mark - Navigation
 
