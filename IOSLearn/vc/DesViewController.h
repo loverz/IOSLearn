@@ -18,6 +18,10 @@
 
 
 @interface DesViewController : UIViewController
-@property (nonatomic,weak) id <DesViewControllerDelegate> delegate;
 
+// 先声明一个block 类似handler
+typedef void (^PassDataBlock)(NSString * str);
+
+@property (nonatomic,weak) id <DesViewControllerDelegate> delegate;
+@property (copy) PassDataBlock block;
 @end

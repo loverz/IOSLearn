@@ -38,6 +38,10 @@
 - (void) goClick{
     DesViewController * desVC = [[DesViewController alloc] init];
     desVC.delegate = self;
+    desVC.block = ^(NSString *str){
+        NSLog(@"receive msg block : |%@" , str);
+    };
+    
     [self.navigationController pushViewController:desVC animated:YES];
     
     

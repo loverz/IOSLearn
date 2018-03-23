@@ -24,10 +24,24 @@
     
     UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
     [btn setTitle:@"return" forState:UIControlStateNormal];
-    [btn setTintColor:[UIColor blackColor]];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(returnVCStr) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    UIButton * btn2 = [[UIButton alloc] initWithFrame:CGRectMake(50, 150, 100, 50)];
+    [btn2 setTitle:@"returnblock" forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal  ];
+    
+    [btn2 addTarget:self action:@selector(returnVCStr2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void) returnVCStr2{
+    if(self.block){
+        self.block(@"msg from block 从block回调的数据");
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
