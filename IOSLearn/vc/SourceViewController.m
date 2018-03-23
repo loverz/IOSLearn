@@ -8,8 +8,10 @@
 
 #import "SourceViewController.h"
 #import "DesViewController.h"
+#import "MyTabBarViewController.h"
 @interface SourceViewController ()<DesViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *goTabBtn;
 @end
 
 @implementation SourceViewController
@@ -22,8 +24,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"view will appear"
-          );
+//    NSLog(@"view will appear"
+//          );
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem * goBtn = [[UIBarButtonItem alloc] initWithTitle:@"go" style:UIBarButtonItemStyleDone target:self action:@selector(goClick)];
     self.navigationItem.rightBarButtonItem = goBtn;
@@ -44,6 +46,12 @@
     
     [self.navigationController pushViewController:desVC animated:YES];
     
+    
+}
+- (IBAction)btnGoTabClick:(id)sender {
+    MyTabBarViewController * myTab = [[MyTabBarViewController alloc] init];
+    
+    [self.navigationController pushViewController:myTab animated:YES];
     
 }
 
