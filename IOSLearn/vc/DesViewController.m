@@ -21,6 +21,12 @@
     self.navigationItem.leftBarButtonItem = backBtn;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+    [btn setTitle:@"return" forState:UIControlStateNormal];
+    [btn setTintColor:[UIColor blackColor]];
+    [btn addTarget:self action:@selector(returnVCStr) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -29,7 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) returnVCStr{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"desVCReturn" object:@"你好~~~world！"];
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 -(void) backClick{
+    // 调用代理方法（借口）需要先校验代理是否能够触发
     if([self.delegate respondsToSelector:@selector(desViewController:des2sourceStr:)]){
         [self.delegate desViewController:self des2sourceStr:@"hahahah"];
     }

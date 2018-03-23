@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMsg:) name:@"desVCReturn" object:nil];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -43,6 +43,11 @@
     
 }
 
+-(void)receiveMsg : (NSNotification *) notification {
+    NSString * msg = (NSString*) notification.object;
+    NSLog(@"receive msg from notification center : %@",msg);
+}
+
 -(void)desViewController:(DesViewController *)des des2sourceStr:(NSString *)str{
     
     
@@ -58,5 +63,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)dealloc {
+    // 观察者模式需要释放界面的时候取消注册
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
