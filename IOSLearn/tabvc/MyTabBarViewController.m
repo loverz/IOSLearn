@@ -8,7 +8,7 @@
 
 #import "MyTabBarViewController.h"
 #import "FindViewController.h"
-@interface MyTabBarViewController ()
+@interface MyTabBarViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -56,6 +56,8 @@
     self.viewControllers = @[homeNVC,contactNVC,findNVC,meNVC];
     self.selectedViewController = homeNVC;
     
+    // 设置代理
+    self.delegate = self;
     
     UIBarButtonItem * goBtn = [[UIBarButtonItem alloc] initWithTitle:@"go" style:UIBarButtonItemStyleDone target:self action:@selector(goClick)];
     self.navigationItem.rightBarButtonItem = goBtn;
@@ -71,6 +73,30 @@
 }
 */
 
+-(BOOL) tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+//    UINavigationController * nav = (UINavigationController * )viewController;
+//    UIViewController * vc = nav.topViewController;
+//    if([vc isKindOfClass:[FindViewController class]]){
+//        NSLog(@"find tab bar view show!!!");
+//    } else {
+//        NSLog(@"selected index %lu" , tabBarController.selectedIndex);
+//    }
+    
+    
+    return YES;
+}
+
+-(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    UINavigationController * nav = (UINavigationController * )viewController;
+    UIViewController * vc = nav.topViewController;
+    if([vc isKindOfClass:[FindViewController class]]){
+        NSLog(@"find tab bar view show!!!");
+    } else {
+        NSLog(@"selected index %lu" , tabBarController.selectedIndex);
+    }
+    
+    
+}
 -(void) goClick{
     
 }
