@@ -14,13 +14,16 @@
 @end
 
 @implementation WebTestViewController
+- (IBAction)backTabBarVCClick:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WKWebView * webview = [[WKWebView alloc] initWithFrame:self.view.bounds ];
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
-    [webview loadRequest:request ];
-    [self.view addSubview:webview];
+//    WKWebView * webview = [[WKWebView alloc] initWithFrame:self.view.bounds ];
+//    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+//    [webview loadRequest:request ];
+//    [self.view addSubview:webview];
     
     // Do any additional setup after loading the view from its nib.
 }

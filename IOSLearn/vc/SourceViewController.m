@@ -50,8 +50,11 @@
 }
 - (IBAction)btnGoTabClick:(id)sender {
     MyTabBarViewController * myTab = [[MyTabBarViewController alloc] init];
-    
-    [self.navigationController pushViewController:myTab animated:YES];
+//    [self setModalPresentationStyle:UIModalPresentationPopover];
+    [self presentViewController:myTab animated:YES completion:^(void) {
+        NSLog(@"load completion!!!");
+    }];
+//    [self.navigationController pushViewController:myTab animated:YES];
     
 }
 
