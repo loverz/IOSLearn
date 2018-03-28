@@ -11,6 +11,8 @@
 		4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FC12064F84C006382C7 /* MyTabBarViewController.xib */; };
 		4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FC52064FDA4006382C7 /* FindViewController.m */; };
 		4C534FC82064FDA4006382C7 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FC62064FDA4006382C7 /* FindViewController.xib */; };
+		4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FCB206B9D1D006382C7 /* WebTestViewController.m */; };
+		4C534FCE206B9D1D006382C7 /* WebTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FCC206B9D1D006382C7 /* WebTestViewController.xib */; };
 		4C843D722063A4B3004F0E2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C843D712063A4B3004F0E2A /* AppDelegate.m */; };
 		4C843D752063A4B3004F0E2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C843D742063A4B3004F0E2A /* ViewController.m */; };
 		4C843D782063A4B3004F0E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C843D762063A4B3004F0E2A /* Main.storyboard */; };
@@ -49,6 +51,9 @@
 		4C534FC42064FDA4006382C7 /* FindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		4C534FC52064FDA4006382C7 /* FindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		4C534FC62064FDA4006382C7 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
+		4C534FCA206B9D1D006382C7 /* WebTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTestViewController.h; sourceTree = "<group>"; };
+		4C534FCB206B9D1D006382C7 /* WebTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTestViewController.m; sourceTree = "<group>"; };
+		4C534FCC206B9D1D006382C7 /* WebTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebTestViewController.xib; sourceTree = "<group>"; };
 		4C843D6D2063A4B3004F0E2A /* IOSLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C843D702063A4B3004F0E2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C843D712063A4B3004F0E2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +116,16 @@
 			path = tabvc;
 			sourceTree = "<group>";
 		};
+		4C534FC9206B9C6C006382C7 /* webkit */ = {
+			isa = PBXGroup;
+			children = (
+				4C534FCA206B9D1D006382C7 /* WebTestViewController.h */,
+				4C534FCB206B9D1D006382C7 /* WebTestViewController.m */,
+				4C534FCC206B9D1D006382C7 /* WebTestViewController.xib */,
+			);
+			path = webkit;
+			sourceTree = "<group>";
+		};
 		4C843D642063A4B3004F0E2A = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 		4C843D6F2063A4B3004F0E2A /* IOSLearn */ = {
 			isa = PBXGroup;
 			children = (
+				4C534FC9206B9C6C006382C7 /* webkit */,
 				4C534FBB2064F5E9006382C7 /* tabvc */,
 				4C843DA22063A780004F0E2A /* vc */,
 				4C843D702063A4B3004F0E2A /* AppDelegate.h */,
@@ -293,6 +309,7 @@
 				4C843D7A2063A4B3004F0E2A /* Assets.xcassets in Resources */,
 				4C534FC82064FDA4006382C7 /* FindViewController.xib in Resources */,
 				4C843D782063A4B3004F0E2A /* Main.storyboard in Resources */,
+				4C534FCE206B9D1D006382C7 /* WebTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +341,7 @@
 				4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */,
 				4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */,
 				4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */,
+				4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

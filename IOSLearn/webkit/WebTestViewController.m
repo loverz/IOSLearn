@@ -1,29 +1,28 @@
 //
-//  FindViewController.m
+//  WebTestViewController.m
 //  IOSLearn
 //
-//  Created by loverz on 2018/3/23.
+//  Created by loverz on 2018/3/28.
 //  Copyright © 2018年 loverz. All rights reserved.
 //
 
-#import "FindViewController.h"
 #import "WebTestViewController.h"
-@interface FindViewController ()
+#import <WebKit/WebKit.h>
+
+@interface WebTestViewController ()
 
 @end
 
-@implementation FindViewController
+@implementation WebTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"find"];
+    WKWebView * webview = [[WKWebView alloc] initWithFrame:self.view.bounds ];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    [webview loadRequest:request ];
+    [self.view addSubview:webview];
+    
     // Do any additional setup after loading the view from its nib.
-}
-- (IBAction)goWebBtnClick:(id)sender {
-    
-    WebTestViewController * vc = [[WebTestViewController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -27,6 +27,9 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" red="1" green="0.15612218219999999" blue="0.1018617094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="goWebBtnClick:" destination="-1" eventType="touchUpInside" id="hxQ-zi-b9i"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.31633791547371293" green="0.28584950481210869" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
