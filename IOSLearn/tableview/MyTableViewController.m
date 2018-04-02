@@ -20,6 +20,7 @@
     if(_myTable == nil) {
         _myTable = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _myTable.dataSource = self;
+        _myTable.delegate = self;// 设置代理协议
     }
     return _myTable;
 }
@@ -62,6 +63,11 @@
     NSString * text = [NSString stringWithFormat:@" %d" ,arc4random_uniform(100000)];
     cell.textLabel.text = text;
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"didSelectRowAtIndexPath index path :%@" , indexPath);
+    
 }
 
 @end
