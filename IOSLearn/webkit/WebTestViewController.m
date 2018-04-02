@@ -27,6 +27,26 @@
     
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)showAlertBtn:(id)sender {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"metion" message:@"are you sure to enter the next page?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * actionYes = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        NSLog(@"you just click yes action!");
+    }];
+    UIAlertAction * actionNo = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * actioin){
+        NSLog(@"you just click no action!");
+    }];
+    
+    UIAlertAction * actionCancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action){
+        NSLog(@"you just click cancel!");
+    }];
+    [alert addAction:actionYes];
+    [alert addAction:actionNo];
+    [alert addAction:actionCancel];
+    [self presentViewController:alert animated:YES completion:^{
+        NSLog(@"present view alert complete");
+    }];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

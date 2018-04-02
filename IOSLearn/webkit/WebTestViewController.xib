@@ -28,6 +28,14 @@
                         <action selector="backTabBarVCClick:" destination="-1" eventType="touchUpInside" id="2N0-xl-r8m"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4u-Df-yE8">
+                    <rect key="frame" x="141" y="429" width="93" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="showAlert"/>
+                    <connections>
+                        <action selector="showAlertBtn:" destination="-1" eventType="touchUpInside" id="AFo-Ci-Jjd"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
