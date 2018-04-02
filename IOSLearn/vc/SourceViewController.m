@@ -9,6 +9,7 @@
 #import "SourceViewController.h"
 #import "DesViewController.h"
 #import "MyTabBarViewController.h"
+#import "MyTableViewController.h"
 @interface SourceViewController ()<DesViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *goTabBtn;
@@ -21,6 +22,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMsg:) name:@"desVCReturn" object:nil];
     
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)goToTableViewVCClick:(id)sender {
+    MyTableViewController * myTableVC = [[MyTableViewController alloc] init];
+    [self.navigationController pushViewController:myTableVC animated:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

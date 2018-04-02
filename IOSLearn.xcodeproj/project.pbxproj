@@ -25,6 +25,8 @@
 		4C843DA72063A79C004F0E2A /* SourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C843DA52063A79C004F0E2A /* SourceViewController.xib */; };
 		4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C843DA92063A7AE004F0E2A /* DesViewController.m */; };
 		4C843DAC2063A7AE004F0E2A /* DesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C843DAA2063A7AE004F0E2A /* DesViewController.xib */; };
+		4C9A297F20722141007CADCB /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A297D20722141007CADCB /* MyTableViewController.m */; };
+		4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A297E20722141007CADCB /* MyTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		4C843DA82063A7AE004F0E2A /* DesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesViewController.h; sourceTree = "<group>"; };
 		4C843DA92063A7AE004F0E2A /* DesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesViewController.m; sourceTree = "<group>"; };
 		4C843DAA2063A7AE004F0E2A /* DesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesViewController.xib; sourceTree = "<group>"; };
+		4C9A297C20722141007CADCB /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		4C9A297D20722141007CADCB /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		4C9A297E20722141007CADCB /* MyTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,7 @@
 		4C843D6F2063A4B3004F0E2A /* IOSLearn */ = {
 			isa = PBXGroup;
 			children = (
+				4C9A297B20722113007CADCB /* tableview */,
 				4C534FC9206B9C6C006382C7 /* webkit */,
 				4C534FBB2064F5E9006382C7 /* tabvc */,
 				4C843DA22063A780004F0E2A /* vc */,
@@ -194,6 +200,16 @@
 				4C843DAA2063A7AE004F0E2A /* DesViewController.xib */,
 			);
 			path = vc;
+			sourceTree = "<group>";
+		};
+		4C9A297B20722113007CADCB /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				4C9A297C20722141007CADCB /* MyTableViewController.h */,
+				4C9A297D20722141007CADCB /* MyTableViewController.m */,
+				4C9A297E20722141007CADCB /* MyTableViewController.xib */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */,
+				4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */,
 				4C843DAC2063A7AE004F0E2A /* DesViewController.xib in Resources */,
 				4C843D7D2063A4B3004F0E2A /* LaunchScreen.storyboard in Resources */,
 				4C843DA72063A79C004F0E2A /* SourceViewController.xib in Resources */,
@@ -340,6 +357,7 @@
 				4C843D722063A4B3004F0E2A /* AppDelegate.m in Sources */,
 				4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */,
 				4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */,
+				4C9A297F20722141007CADCB /* MyTableViewController.m in Sources */,
 				4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */,
 				4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */,
 			);
