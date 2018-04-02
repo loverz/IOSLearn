@@ -507,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LB9B4WT9BN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/IOSLearn/";
 				INFOPLIST_FILE = IOSLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loverz.IOSLearn;
@@ -522,6 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LB9B4WT9BN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/IOSLearn/";
 				INFOPLIST_FILE = IOSLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loverz.IOSLearn;
