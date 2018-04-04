@@ -10,6 +10,11 @@
 
 @interface MyTableViewController ()
 
+{
+    NSMutableArray * data;
+    
+}
+
 @end
 
 
@@ -21,12 +26,19 @@
         _myTable = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _myTable.dataSource = self;
         _myTable.delegate = self;// 设置代理协议
+        _myTable.separatorColor = [UIColor redColor];
+        
+        // 删除多余分割线
+        UIView * view = [UIView new];
+        view.backgroundColor = [UIColor clearColor];
+        _myTable.tableFooterView = view;
     }
     return _myTable;
 }
 
 
 - (void)viewDidLoad {
+    data = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4", nil];
     [super viewDidLoad];
     [self setTitle:@"MyTable"];
     [self.view addSubview:self.myTable];
@@ -48,7 +60,11 @@
 }
 */
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    
+    if(data == nil) {
+        return 0;
+    }
+    return data.count;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +76,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         
     }
-    NSString * text = [NSString stringWithFormat:@" %d" ,arc4random_uniform(100000)];
+    NSString * text = [NSString stringWithFormat:@" %@" ,(NSString *)data[indexPath.row]];
     cell.textLabel.text = text;
     return cell;
 }
@@ -68,6 +84,22 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectRowAtIndexPath index path :%@" , indexPath);
     
+}
+
+- (nullable NSArray <UITableViewRowAction *>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction * action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"add" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        //
+        
+    }];
+ 
+    UITableViewRowAction * action3 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+//        NumberGroup
+        NSLog(@"delete row is : %ld",(long)indexPath.row );
+        [data removeObjectAtIndex:indexPath.row];
+        [_myTable reloadData];
+    }];
+    NSArray * array = @[action1,action3];
+    return array;
 }
 
 @end
