@@ -36,7 +36,7 @@
         UIView * tableViewHeader = [[UIView alloc] initWithFrame:CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width, 40)];
         tableViewHeader.backgroundColor = [UIColor greenColor];
         _myTable.tableHeaderView = tableViewHeader;
-        // test
+        // test 测试github忽略deriveddata文件夹中所有文件
     }
     return _myTable;
 }
