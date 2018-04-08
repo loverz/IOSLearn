@@ -32,6 +32,11 @@
         UIView * view = [UIView new];
         view.backgroundColor = [UIColor clearColor];
         _myTable.tableFooterView = view;
+        // 添加headview
+        UIView * tableViewHeader = [[UIView alloc] initWithFrame:CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width, 40)];
+        tableViewHeader.backgroundColor = [UIColor greenColor];
+        _myTable.tableHeaderView = tableViewHeader;
+        
     }
     return _myTable;
 }
@@ -86,14 +91,14 @@
     
 }
 
-- (nullable NSArray <UITableViewRowAction *>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction * action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"add" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         //
         
     }];
- 
+    
     UITableViewRowAction * action3 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-//        NumberGroup
+        //        NumberGroup
         NSLog(@"delete row is : %ld",(long)indexPath.row );
         [data removeObjectAtIndex:indexPath.row];
         [_myTable reloadData];
@@ -101,5 +106,7 @@
     NSArray * array = @[action1,action3];
     return array;
 }
+
+
 
 @end
