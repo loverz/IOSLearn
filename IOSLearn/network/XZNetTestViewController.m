@@ -7,6 +7,8 @@
 //
 
 #import "XZNetTestViewController.h"
+#import "AFNetworking.h"
+
 
 @interface XZNetTestViewController ()
 
@@ -18,6 +20,11 @@
     [super viewDidLoad];
     [self setTitle:@"net"];
     // Do any additional setup after loading the view from its nib.
+}
+
+
+-(void) initNetwork{
+    
 }
 
 - (void)didReceiveMemoryWarning {
