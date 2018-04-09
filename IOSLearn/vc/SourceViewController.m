@@ -10,6 +10,8 @@
 #import "DesViewController.h"
 #import "MyTabBarViewController.h"
 #import "MyTableViewController.h"
+#import "XZNetTestViewController.h"
+
 @interface SourceViewController ()<DesViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *goTabBtn;
@@ -72,6 +74,13 @@
     
     
     NSLog(@"desVc call back str = %@",str);
+}
+// 网络测试VC
+- (IBAction)goNetVCBtnClick:(id)sender {
+    
+    XZNetTestViewController * vc = [[XZNetTestViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

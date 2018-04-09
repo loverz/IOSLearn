@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
   - ApiAI (0.7.2):
     - ApiAI/AudioFileConverter (= 0.7.2)
     - ApiAI/Core (= 0.7.2)
@@ -26,11 +41,13 @@ PODS:
     - ApiAI/Core
 
 DEPENDENCIES:
+  - AFNetworking
   - ApiAI
 
 SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   ApiAI: d4b49d3736f33ce6f3ef66dc33c0e0fccb23579e
 
-PODFILE CHECKSUM: d470bad30b0def75ff980774ffa4e57bc6551d17
+PODFILE CHECKSUM: 2ca69fb9d0c2eae529fce9931e3b817cb690541f
 
 COCOAPODS: 1.4.0

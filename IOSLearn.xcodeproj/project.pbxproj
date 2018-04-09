@@ -10,6 +10,8 @@
 		4C21E155207A0E74004B6138 /* MyTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E153207A0E74004B6138 /* MyTableCell.m */; };
 		4C21E156207A0E74004B6138 /* MyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C21E154207A0E74004B6138 /* MyTableCell.xib */; };
 		4C21E159207A109F004B6138 /* MYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E158207A109F004B6138 /* MYModel.m */; };
+		4C21E15F207B5DC7004B6138 /* XZNetTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E15D207B5DC7004B6138 /* XZNetTestViewController.m */; };
+		4C21E160207B5DC7004B6138 /* XZNetTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C21E15E207B5DC7004B6138 /* XZNetTestViewController.xib */; };
 		4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FC02064F84C006382C7 /* MyTabBarViewController.m */; };
 		4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FC12064F84C006382C7 /* MyTabBarViewController.xib */; };
 		4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FC52064FDA4006382C7 /* FindViewController.m */; };
@@ -57,6 +59,9 @@
 		4C21E154207A0E74004B6138 /* MyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableCell.xib; sourceTree = "<group>"; };
 		4C21E157207A109F004B6138 /* MYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYModel.h; sourceTree = "<group>"; };
 		4C21E158207A109F004B6138 /* MYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYModel.m; sourceTree = "<group>"; };
+		4C21E15C207B5DC7004B6138 /* XZNetTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZNetTestViewController.h; sourceTree = "<group>"; };
+		4C21E15D207B5DC7004B6138 /* XZNetTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZNetTestViewController.m; sourceTree = "<group>"; };
+		4C21E15E207B5DC7004B6138 /* XZNetTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XZNetTestViewController.xib; sourceTree = "<group>"; };
 		4C534FBF2064F84C006382C7 /* MyTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabBarViewController.h; sourceTree = "<group>"; };
 		4C534FC02064F84C006382C7 /* MyTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTabBarViewController.m; sourceTree = "<group>"; };
 		4C534FC12064F84C006382C7 /* MyTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTabBarViewController.xib; sourceTree = "<group>"; };
@@ -133,6 +138,23 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		4C21E15A207B5CC5004B6138 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = collectionview;
+			sourceTree = "<group>";
+		};
+		4C21E15B207B5D97004B6138 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				4C21E15C207B5DC7004B6138 /* XZNetTestViewController.h */,
+				4C21E15D207B5DC7004B6138 /* XZNetTestViewController.m */,
+				4C21E15E207B5DC7004B6138 /* XZNetTestViewController.xib */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		4C534FBB2064F5E9006382C7 /* tabvc */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +203,8 @@
 		4C843D6F2063A4B3004F0E2A /* IOSLearn */ = {
 			isa = PBXGroup;
 			children = (
+				4C21E15B207B5D97004B6138 /* network */,
+				4C21E15A207B5CC5004B6138 /* collectionview */,
 				4C9A297B20722113007CADCB /* tableview */,
 				4C534FC9206B9C6C006382C7 /* webkit */,
 				4C534FBB2064F5E9006382C7 /* tabvc */,
@@ -366,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C21E160207B5DC7004B6138 /* XZNetTestViewController.xib in Resources */,
 				4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */,
 				4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */,
 				4C843DAC2063A7AE004F0E2A /* DesViewController.xib in Resources */,
@@ -472,6 +497,7 @@
 				4C843DA62063A79C004F0E2A /* SourceViewController.m in Sources */,
 				4C21E159207A109F004B6138 /* MYModel.m in Sources */,
 				4C843D802063A4B3004F0E2A /* main.m in Sources */,
+				4C21E15F207B5DC7004B6138 /* XZNetTestViewController.m in Sources */,
 				4C843D722063A4B3004F0E2A /* AppDelegate.m in Sources */,
 				4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */,
 				4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */,
