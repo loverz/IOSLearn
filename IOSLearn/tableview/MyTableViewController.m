@@ -7,7 +7,8 @@
 //
 
 #import "MyTableViewController.h"
-
+#import "MYModel.h"
+#import "MyTableCell.h"
 @interface MyTableViewController ()
 
 {
@@ -37,6 +38,11 @@
         tableViewHeader.backgroundColor = [UIColor greenColor];
         _myTable.tableHeaderView = tableViewHeader;
         // test 测试github忽略deriveddata文件夹中所有文件
+//        [[_myTable registerNib:[UINib alloc] forCellReuseIdentifier:@"MyTableCell"] forCellReuseIdentifier:@"MyTableCell"];
+        
+        //需要注册对应的nib文件声明
+        [_myTable registerNib:[UINib nibWithNibName:NSStringFromClass([MyTableCell class]) bundle:nil] forCellReuseIdentifier:@"MyTableCell"];
+//        [_mytable registerClass:M forCellReuseIdentifier:<#(nonnull NSString *)#>]
     }
     return _myTable;
 }
@@ -73,16 +79,16 @@
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString * cellID = @"cell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if(cell == nil){
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        
-    }
-    NSString * text = [NSString stringWithFormat:@" %@" ,(NSString *)data[indexPath.row]];
-    cell.textLabel.text = text;
+//    static NSString * cellID = @"MyTableCell";
+//    MyTableCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    if(cell == nil) {
+//        //        cell = [[MyTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"MyTableCell" owner:self options:nil] lastObject];
+//    }
+//    tableView.rowHeight = cell.frame.size.height;
+    MyTableCell * cell =[MyTableCell cellWithTableView:tableView];
+    MYModel * model = [MYModel myCellModel];
+    [cell setData:model];
     return cell;
 }
 

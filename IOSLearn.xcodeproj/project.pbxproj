@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C21E155207A0E74004B6138 /* MyTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E153207A0E74004B6138 /* MyTableCell.m */; };
+		4C21E156207A0E74004B6138 /* MyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C21E154207A0E74004B6138 /* MyTableCell.xib */; };
+		4C21E159207A109F004B6138 /* MYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C21E158207A109F004B6138 /* MYModel.m */; };
 		4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FC02064F84C006382C7 /* MyTabBarViewController.m */; };
 		4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FC12064F84C006382C7 /* MyTabBarViewController.xib */; };
 		4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FC52064FDA4006382C7 /* FindViewController.m */; };
@@ -49,6 +52,11 @@
 
 /* Begin PBXFileReference section */
 		32697030F1FC7C2BBB5B9663 /* Pods-IOSLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSLearn/Pods-IOSLearn.release.xcconfig"; sourceTree = "<group>"; };
+		4C21E152207A0E74004B6138 /* MyTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableCell.h; sourceTree = "<group>"; };
+		4C21E153207A0E74004B6138 /* MyTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableCell.m; sourceTree = "<group>"; };
+		4C21E154207A0E74004B6138 /* MyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableCell.xib; sourceTree = "<group>"; };
+		4C21E157207A109F004B6138 /* MYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYModel.h; sourceTree = "<group>"; };
+		4C21E158207A109F004B6138 /* MYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYModel.m; sourceTree = "<group>"; };
 		4C534FBF2064F84C006382C7 /* MyTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabBarViewController.h; sourceTree = "<group>"; };
 		4C534FC02064F84C006382C7 /* MyTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTabBarViewController.m; sourceTree = "<group>"; };
 		4C534FC12064F84C006382C7 /* MyTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTabBarViewController.xib; sourceTree = "<group>"; };
@@ -113,6 +121,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C21E151207A0E45004B6138 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4C21E152207A0E74004B6138 /* MyTableCell.h */,
+				4C21E153207A0E74004B6138 /* MyTableCell.m */,
+				4C21E154207A0E74004B6138 /* MyTableCell.xib */,
+				4C21E157207A109F004B6138 /* MYModel.h */,
+				4C21E158207A109F004B6138 /* MYModel.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		4C534FBB2064F5E9006382C7 /* tabvc */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +232,7 @@
 		4C9A297B20722113007CADCB /* tableview */ = {
 			isa = PBXGroup;
 			children = (
+				4C21E151207A0E45004B6138 /* cell */,
 				4C9A297C20722141007CADCB /* MyTableViewController.h */,
 				4C9A297D20722141007CADCB /* MyTableViewController.m */,
 				4C9A297E20722141007CADCB /* MyTableViewController.xib */,
@@ -351,6 +372,7 @@
 				4C843D7D2063A4B3004F0E2A /* LaunchScreen.storyboard in Resources */,
 				4C843DA72063A79C004F0E2A /* SourceViewController.xib in Resources */,
 				4C843D7A2063A4B3004F0E2A /* Assets.xcassets in Resources */,
+				4C21E156207A0E74004B6138 /* MyTableCell.xib in Resources */,
 				4C534FC82064FDA4006382C7 /* FindViewController.xib in Resources */,
 				4C843D782063A4B3004F0E2A /* Main.storyboard in Resources */,
 				4C534FCE206B9D1D006382C7 /* WebTestViewController.xib in Resources */,
@@ -448,12 +470,14 @@
 			files = (
 				4C843D752063A4B3004F0E2A /* ViewController.m in Sources */,
 				4C843DA62063A79C004F0E2A /* SourceViewController.m in Sources */,
+				4C21E159207A109F004B6138 /* MYModel.m in Sources */,
 				4C843D802063A4B3004F0E2A /* main.m in Sources */,
 				4C843D722063A4B3004F0E2A /* AppDelegate.m in Sources */,
 				4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */,
 				4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */,
 				4C9A297F20722141007CADCB /* MyTableViewController.m in Sources */,
 				4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */,
+				4C21E155207A0E74004B6138 /* MyTableCell.m in Sources */,
 				4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
