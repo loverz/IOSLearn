@@ -20,11 +20,33 @@
     [super viewDidLoad];
     [self setTitle:@"net"];
     // Do any additional setup after loading the view from its nib.
+    [self initNetwork];
 }
 
 
 -(void) initNetwork{
-    
+    // 获取监听监管
+    AFNetworkReachabilityManager * manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"network unknown");
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"AFNetworkReachabilityStatusNotReachable");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"wifi....");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"3G/4G....");
+                break;
+            default:
+                break;
+        }
+    }];
+    // 开始监听
+    [manager startMonitoring];
 }
 
 - (void)didReceiveMemoryWarning {
