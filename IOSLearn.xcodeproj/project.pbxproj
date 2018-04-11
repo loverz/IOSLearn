@@ -18,6 +18,8 @@
 		4C534FC82064FDA4006382C7 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FC62064FDA4006382C7 /* FindViewController.xib */; };
 		4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C534FCB206B9D1D006382C7 /* WebTestViewController.m */; };
 		4C534FCE206B9D1D006382C7 /* WebTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C534FCC206B9D1D006382C7 /* WebTestViewController.xib */; };
+		4C5CB3B0207DEB6700E2BA16 /* XZCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CB3AE207DEB6700E2BA16 /* XZCollectionViewVC.m */; };
+		4C5CB3B1207DEB6700E2BA16 /* XZCollectionViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CB3AF207DEB6700E2BA16 /* XZCollectionViewVC.xib */; };
 		4C843D722063A4B3004F0E2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C843D712063A4B3004F0E2A /* AppDelegate.m */; };
 		4C843D752063A4B3004F0E2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C843D742063A4B3004F0E2A /* ViewController.m */; };
 		4C843D782063A4B3004F0E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C843D762063A4B3004F0E2A /* Main.storyboard */; };
@@ -71,6 +73,9 @@
 		4C534FCA206B9D1D006382C7 /* WebTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTestViewController.h; sourceTree = "<group>"; };
 		4C534FCB206B9D1D006382C7 /* WebTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTestViewController.m; sourceTree = "<group>"; };
 		4C534FCC206B9D1D006382C7 /* WebTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebTestViewController.xib; sourceTree = "<group>"; };
+		4C5CB3AD207DEB6700E2BA16 /* XZCollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZCollectionViewVC.h; sourceTree = "<group>"; };
+		4C5CB3AE207DEB6700E2BA16 /* XZCollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZCollectionViewVC.m; sourceTree = "<group>"; };
+		4C5CB3AF207DEB6700E2BA16 /* XZCollectionViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XZCollectionViewVC.xib; sourceTree = "<group>"; };
 		4C843D6D2063A4B3004F0E2A /* IOSLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C843D702063A4B3004F0E2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C843D712063A4B3004F0E2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +146,9 @@
 		4C21E15A207B5CC5004B6138 /* collectionview */ = {
 			isa = PBXGroup;
 			children = (
+				4C5CB3AD207DEB6700E2BA16 /* XZCollectionViewVC.h */,
+				4C5CB3AE207DEB6700E2BA16 /* XZCollectionViewVC.m */,
+				4C5CB3AF207DEB6700E2BA16 /* XZCollectionViewVC.xib */,
 			);
 			path = collectionview;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */,
 				4C843DAC2063A7AE004F0E2A /* DesViewController.xib in Resources */,
 				4C843D7D2063A4B3004F0E2A /* LaunchScreen.storyboard in Resources */,
+				4C5CB3B1207DEB6700E2BA16 /* XZCollectionViewVC.xib in Resources */,
 				4C843DA72063A79C004F0E2A /* SourceViewController.xib in Resources */,
 				4C843D7A2063A4B3004F0E2A /* Assets.xcassets in Resources */,
 				4C21E156207A0E74004B6138 /* MyTableCell.xib in Resources */,
@@ -502,6 +511,7 @@
 				4C534FC22064F84C006382C7 /* MyTabBarViewController.m in Sources */,
 				4C843DAB2063A7AE004F0E2A /* DesViewController.m in Sources */,
 				4C9A297F20722141007CADCB /* MyTableViewController.m in Sources */,
+				4C5CB3B0207DEB6700E2BA16 /* XZCollectionViewVC.m in Sources */,
 				4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */,
 				4C21E155207A0E74004B6138 /* MyTableCell.m in Sources */,
 				4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "MyTabBarViewController.h"
 #import "MyTableViewController.h"
 #import "XZNetTestViewController.h"
+#import "XZCollectionViewVC.h"
 
 @interface SourceViewController ()<DesViewControllerDelegate>
 
@@ -63,6 +64,12 @@
     }];
 //    [self.navigationController pushViewController:myTab animated:YES];
     
+}
+/**跳转到collection view controller
+*/
+- (IBAction)goToCollectionBtnClick:(UIButton *)sender {
+    XZCollectionViewVC * vc = [[XZCollectionViewVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)receiveMsg : (NSNotification *) notification {

@@ -45,6 +45,14 @@
                         <action selector="goNetVCBtnClick:" destination="-1" eventType="touchUpInside" id="Vkb-wN-EFY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZx-fG-yoD">
+                    <rect key="frame" x="116" y="508" width="149" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="go to collection"/>
+                    <connections>
+                        <action selector="goToCollectionBtnClick:" destination="-1" eventType="touchUpInside" id="0s0-F0-zpg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
