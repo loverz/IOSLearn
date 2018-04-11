@@ -25,7 +25,7 @@
 
 
 -(void) initNetwork{
-    // 获取监听监管
+    // 获取监听网络监管
     AFNetworkReachabilityManager * manager = [AFNetworkReachabilityManager sharedManager];
     [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
