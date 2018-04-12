@@ -34,6 +34,8 @@
 		4C843DAC2063A7AE004F0E2A /* DesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C843DAA2063A7AE004F0E2A /* DesViewController.xib */; };
 		4C9A297F20722141007CADCB /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A297D20722141007CADCB /* MyTableViewController.m */; };
 		4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A297E20722141007CADCB /* MyTableViewController.xib */; };
+		4CA050AA207EFE470053C49E /* MYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA050A8207EFE470053C49E /* MYCollectionViewCell.m */; };
+		4CA050AB207EFE470053C49E /* MYCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA050A9207EFE470053C49E /* MYCollectionViewCell.xib */; };
 		6958E607064119DF180D33D2 /* libPods-IOSLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62BEC225803C6547D4075B5 /* libPods-IOSLearn.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,9 @@
 		4C9A297C20722141007CADCB /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		4C9A297D20722141007CADCB /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		4C9A297E20722141007CADCB /* MyTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewController.xib; sourceTree = "<group>"; };
+		4CA050A7207EFE470053C49E /* MYCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYCollectionViewCell.h; sourceTree = "<group>"; };
+		4CA050A8207EFE470053C49E /* MYCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYCollectionViewCell.m; sourceTree = "<group>"; };
+		4CA050A9207EFE470053C49E /* MYCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYCollectionViewCell.xib; sourceTree = "<group>"; };
 		6FE22AD821B279A083006016 /* Pods-IOSLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSLearn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSLearn/Pods-IOSLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		D62BEC225803C6547D4075B5 /* libPods-IOSLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOSLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +151,7 @@
 		4C21E15A207B5CC5004B6138 /* collectionview */ = {
 			isa = PBXGroup;
 			children = (
+				4CA050A6207EFE260053C49E /* cell */,
 				4C5CB3AD207DEB6700E2BA16 /* XZCollectionViewVC.h */,
 				4C5CB3AE207DEB6700E2BA16 /* XZCollectionViewVC.m */,
 				4C5CB3AF207DEB6700E2BA16 /* XZCollectionViewVC.xib */,
@@ -270,6 +276,16 @@
 				4C9A297E20722141007CADCB /* MyTableViewController.xib */,
 			);
 			path = tableview;
+			sourceTree = "<group>";
+		};
+		4CA050A6207EFE260053C49E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4CA050A7207EFE470053C49E /* MYCollectionViewCell.h */,
+				4CA050A8207EFE470053C49E /* MYCollectionViewCell.m */,
+				4CA050A9207EFE470053C49E /* MYCollectionViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		AB17A2CF80D95F37D409CDA5 /* Pods */ = {
@@ -398,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA050AB207EFE470053C49E /* MYCollectionViewCell.xib in Resources */,
 				4C21E160207B5DC7004B6138 /* XZNetTestViewController.xib in Resources */,
 				4C534FC32064F84C006382C7 /* MyTabBarViewController.xib in Resources */,
 				4C9A298020722141007CADCB /* MyTableViewController.xib in Resources */,
@@ -514,6 +531,7 @@
 				4C5CB3B0207DEB6700E2BA16 /* XZCollectionViewVC.m in Sources */,
 				4C534FC72064FDA4006382C7 /* FindViewController.m in Sources */,
 				4C21E155207A0E74004B6138 /* MyTableCell.m in Sources */,
+				4CA050AA207EFE470053C49E /* MYCollectionViewCell.m in Sources */,
 				4C534FCD206B9D1D006382C7 /* WebTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
